@@ -54,4 +54,5 @@
            	   }
            }
            Template.prototype.init.prototype = Template.prototype; 
+           return Template;
 })
