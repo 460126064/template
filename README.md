@@ -6,7 +6,9 @@
 ### [使用方法]()
 const t = require('template.js');
 传递模板字符串以及参数对象
-const d = t(domString,option)
+const d = t(domString,option);
+获取模板字符串
+const tpl = d.tpl;
 ### [配置参数]()
 目前支持模板标识的exgExp，默认为<%%>,输出配置<%=%>
 const d = t(domString,{
@@ -15,3 +17,4 @@ const d = t(domString,{
 ### [后续优化]()
 增加配置项，将标识regExp改为字符串标识，方便使用
 增加命名空间，防止命名冲突。
+优化逻辑判断语句，增加with作用域
