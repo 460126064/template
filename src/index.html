@@ -7,11 +7,10 @@
 <body>
 	<script type="text/javascript" src="./template.js"></script>
 	<script type="text/javascript">
-	    var dom = `<div><%=title%></div><span><%=name%></span><%for(var i = 0; i < 10; i++){%><span><%=i%></span><%}%>`
+	    var dom = '<div><%=title%></div><span><%=name%></span><%for(var i = 0; i < 10; i++){%><span><%=i%></span><%}%>'
 	   var s = Template(dom,{
-	   	     title : '测试',
-	   	     name : '李凯',
-	   	     age : 12
+	   	     title : 'this is a javascript template',
+	   	     name : 'javascript'
 	   })            	
         console.log(s.tpl)
 	</script>
