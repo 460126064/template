@@ -8,7 +8,7 @@
          }     
       })(typeof window !== 'undefined' ? window : this,function(global) {
            global.Template = function(html,option) {
-                new Template.prototype.init(html,option);
+                return new Template.prototype.init(html,option);
            } 
            Template.prototype = {
            	   constructor : Template,
@@ -36,6 +36,7 @@
            	   //将剩余字符串拼接
            	   this.code += '_codeSet.push(' + html.slice(this.pointer) + ');\n';
            	   this.code += 'return _codeSet.join("")';
+               this.tpl = new Function(this.code)();
            	   },
            	   compile : function(part,option) {
            	   	  //查看是否处于闭合状态;
